@@ -171,50 +171,8 @@
     <p class="copyright">Powered by <a href="">ThanhNG</a></p>
 </div>
 </div>
-<script !src="">
-    /*slide*/
-    let slideIndex = 0;
-    showSlides();
+<script !src="script.js">
 
-    function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 5000); // Change image every 2 seconds
-    }
-    /**/
-    var header = document.getElementById('header');
-    var mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenu.onclick = function (){
-        var isClosed = header.clientHeight === 46;
-        if (isClosed){
-            header.style.height = 'auto';
-        }
-        else{
-            header.style.height ='46px';
-        }
-    }
-
-    //tự động đóng khi mở menu
-    var menuItems = document.querySelectorAll('#nav li a[href *="#"]');
-    for (var i = 0 ; i< menuItems.length; i++){
-        var menuItem = menuItems[i];
-
-        menuItem.onclick = function (){
-            header.style.height = null;
-        }
-    }
 
 </script>
 </body>
